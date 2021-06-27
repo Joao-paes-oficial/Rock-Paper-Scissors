@@ -6,9 +6,9 @@ const computerScore_span = document.querySelector('.computer-score');
 const scoreBoard = document.querySelector('.score-board');
 const result = document.querySelector('.result > p');
 
-const rock = document.getElementById('rock');
-const paper = document.getElementById('paper');
-const scissors = document.getElementById('scissors');
+const rock = document.getElementById('Rock');
+const paper = document.getElementById('Paper');
+const scissors = document.getElementById('Scissors');
 
 
 
@@ -24,6 +24,7 @@ function win(userChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     
     result.innerHTML = `${userChoice} beats ${computerChoice}. You won!`
+    document.getElementById(userChoice).classList.add('green-glow');
 }
 
 function lose(userChoice, computerChoice) {
