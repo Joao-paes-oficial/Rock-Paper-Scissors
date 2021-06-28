@@ -23,7 +23,7 @@ function win(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     
-    result.innerHTML = `${userChoice} beats ${computerChoice}. You won!`
+    result.innerHTML = `${userChoice} wins ${computerChoice}. You won!`
 
     document.getElementById(userChoice).classList.add('green-glow');
     document.getElementById(computerChoice).classList.add('red-glow');
