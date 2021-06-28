@@ -24,7 +24,13 @@ function win(userChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     
     result.innerHTML = `${userChoice} beats ${computerChoice}. You won!`
+
     document.getElementById(userChoice).classList.add('green-glow');
+    document.getElementById(computerChoice).classList.add('red-glow');
+    setTimeout(() => {
+        document.getElementById(userChoice).classList.remove('green-glow');
+        document.getElementById(computerChoice).classList.remove('red-glow');
+    }, 600)
 }
 
 function lose(userChoice, computerChoice) {
@@ -33,13 +39,24 @@ function lose(userChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     
     result.innerHTML = `${userChoice} loses to ${computerChoice}. You lost!`
+
+    document.getElementById(userChoice).classList.add('red-glow');
+    document.getElementById(computerChoice).classList.add('green-glow');
+    setTimeout(() => {
+        document.getElementById(userChoice).classList.remove('red-glow');
+        document.getElementById(computerChoice).classList.remove('green-glow');
+    }, 600)
 }
 
-function draw() {
+function draw(userChoice) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    
     result.innerHTML = "It's a draw.";
+
+    document.getElementById(userChoice).classList.add('gray-glow');
+    setTimeout(() => {
+        document.getElementById(userChoice).classList.remove('gray-glow');
+    }, 600)
 }
 
 function game(userChoice) {
@@ -60,7 +77,7 @@ function game(userChoice) {
         case "RockRock":
         case "PaperPaper":
         case "ScissorsScissors":
-            draw();
+            draw(userChoice);
             break;
     }
 }
