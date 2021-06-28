@@ -11,30 +11,35 @@
     <header>
         <h1>Rock Paper Scissor</h1>
     </header>
+    <div class="container">
+        <div class="main">
+            <div class="score-board">
+                <div id="user-label" class="badge">User</div>
+                <div id="computer-label" class="badge">[ AI ]</div>
+                <span class="user-score">0</span>:<span class="computer-score">0</span>
+            </div>
 
-    <div class="score-board">
-        <div id="user-label" class="badge">user</div>
-        <div id="computer-label" class="badge">[ AI ]</div>
-        <span class="user-score">0</span>:<span class="computer-score">0</span>
-    </div>
+            <div class="result">
+                <p>May the best wins!</p>
+            </div>
 
-    <div class="result">
-        <p>May the best wins!</p>
-    </div>
+            <div class="choices">
+                <div class="choice" id="Rock" >
+                    <img src="./assets//images/rock.png" alt="Rock">
+                </div>
+                <div class="choice" id="Paper" >
+                    <img src="./assets//images/paper.png" alt="Paper">
+                </div>
+                <div class="choice" id="Scissors" >
+                    <img src="./assets//images/scissors.png" alt="Scissors">
+                </div>
+            </div>
 
-    <div class="choices">
-        <div class="choice" id="Rock" >
-            <img src="./assets//images/rock.png" alt="Rock">
+            <p class="action-message">Make your movement.</p>
         </div>
-        <div class="choice" id="Paper" >
-            <img src="./assets//images/paper.png" alt="Paper">
         </div>
-        <div class="choice" id="Scissors" >
-            <img src="./assets//images/scissors.png" alt="Scissors">
-        </div>
-    </div>
-
-    <p class="action-message">Make your movement</p>
+        
+    
     <script src="script.js"></script>
 </body>
 </html>
